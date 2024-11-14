@@ -1,6 +1,41 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript", "plugin:prettier/recommended"],
+  "extends": ["next/core-web-vitals", "airbnb-base"],
   "rules": {
-    "prettier/prettier": ["error"]
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-curly-brace-presence": "error",
+    "react/jsx-sort-props": "warn",
+    "react/jsx-key": "warn",
+    "@typescript-eslint/no-inferrable-types": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "semi": ["error", "always"],
+    "curly": ["error", "all"],
+    "quotes": ["error", "single"],
+    "@typescript-eslint/ban-ts-comment": "off",
+    "no-undef": "off",
+    "no-console": "warn",
+    "no-param-reassign": "error",
+    "react/prop-types": "off",
+    "object-curly-spacing": ["error", "always"],
+    "@typescript-eslint/no-var-requires": "off",
+    "eol-last": ["error", "always"],
+    "import/order": [
+      "error",
+      {
+        "groups": ["builtin", "external", "internal"],
+        "pathGroups": [
+          {
+            "pattern": "react",
+            "group": "external",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["react"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
   }
 }
